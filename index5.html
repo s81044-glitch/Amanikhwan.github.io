@@ -91,7 +91,7 @@
             flex-grow: 1; 
         }
 
-        /* 1. Functional Links: Updated styles */
+        /* Functional Links */
         .social-links a {
             color: var(--color-accent);
             text-decoration: none;
@@ -104,26 +104,44 @@
             color: var(--color-text-primary);
         }
 
+        /* Case Study Button Styles */
+        .btn-focus-app {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 16px;
+            background-color: var(--color-accent);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-focus-app:hover {
+            background-color: #003366;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 77, 153, 0.25);
+            color: #ffffff;
+        }
+
         /* Desktop Grid Layout (6 columns) */
 
-        /* Card 1 (Profile) - DIKEMASKINI DENGAN IMEJ LATAR BELAKANG */
+        /* Card 1 (Profile) */
         .card-profile {
             grid-column: span 4;
             grid-row: span 2;
             justify-content: space-between;
-            
-            /* === GAYA IMEJ LATAR BELAKANG BARU === */
             background-image: url('bg.jpg'); 
             background-size: cover;          
             background-position: center;     
             background-repeat: no-repeat;
-            
-            /* GAYA TEKS UNTUK Imej Latar Belakang */
             color: #ffffff; 
             border: none; 
         }
 
-        /* Mengubah warna teks sekunder dalam kad profil kepada warna cerah */
         .card-profile .card-subtitle,
         .card-profile .tagline,
         .card-profile .card-content {
@@ -131,50 +149,48 @@
         }
 
         .card-profile .card-header {
-            color: #ffd700; /* Emas cerah untuk header */
+            color: #ffd700; 
         }
 
         .card-profile .social-links a {
-            color: #ffffff; /* Pautan berwarna putih */
+            color: #ffffff; 
         }
 
         .card-profile .social-links a:hover {
-            color: #ffd700; /* Hover effect cerah */
+            color: #ffd700; 
         }
-        /* AKHIR GAYA IMEJ LATAR BELAKANG */
 
-
-        /* Card 2 (Location): Small box (2x1) */
+        /* Card 2 (Location) */
         .card-location {
             grid-column: span 2;
             grid-row: span 1;
         }
 
-        /* Card 3 (Tech Stack): Medium box (2x1) */
+        /* Card 3 (Tech Stack) */
         .card-tech-stack {
             grid-column: span 2;
             grid-row: span 1;
         }
         
-        /* Card 4 (Case Study): Medium box (2x1) */
+        /* Card 4 (Case Study) */
         .card-case-study {
             grid-column: span 2;
             grid-row: span 1;
         }
 
-        /* Card 5 (Hobby): Small box (1x1) */
+        /* Card 5 (Hobby) */
         .card-hobby {
             grid-column: span 1;
             grid-row: span 1;
         }
 
-        /* Card 7 (Reflection): New Card (1x1) */
+        /* Card 7 (Reflection) */
         .card-reflection {
             grid-column: span 1;
             grid-row: span 1;
         }
 
-        /* Card 6 (Playlist): Wide box (6x1) at the bottom */
+        /* Card 6 (Playlist) */
         .card-playlist {
             grid-column: span 6;
             grid-row: span 1;
@@ -300,6 +316,7 @@
                 </p>
                 <div class="card-content">
                     <p>Using rheology data to understand how cooking time and ingredient ratio affect texture and shelf life.</p>
+                    <a href="https://s81044-glitch.github.io/-focus-timer-app/app.html" class="btn-focus-app" target="_blank">Try My Focus Timer App</a>
                 </div>
             </div>
 
@@ -337,11 +354,9 @@
     </div>
     
     <script>
-        // Script untuk mengemas kini waktu tempatan secara dinamik
         function updateTime() {
             const timeElement = document.querySelector('.current-time');
             if (timeElement) {
-                // Menggunakan masa semasa (seperti yang diminta)
                 const now = new Date();
                 const options = { 
                     timeZone: 'Asia/Kuala_Lumpur', 
@@ -349,13 +364,10 @@
                     minute: '2-digit', 
                     hour12: true 
                 };
-                // Memaparkan masa yang dikemas kini
                 timeElement.textContent = now.toLocaleTimeString('en-US', options);
             }
         }
-        // Tetapkan waktu awal
         updateTime();
-        // Kemas kini setiap minit
         setInterval(updateTime, 60000); 
     </script>
 </body>
